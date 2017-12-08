@@ -8,13 +8,13 @@ const Hero = function(name, health, favFood) {
 }
 
 Hero.prototype.eat = function(food) {
+  this.health = (food.replenishment);
+}
+
+Hero.prototype.eatUnsafe = function(food) {
  if(food.safe === false) {
   this.health -= 10;
  }
- if(this.favFood = food.name) {
-  return this.health = (food.replenishment * 1.5);
- }
- this.health = food.replenishment;
 }
 
 Hero.prototype.add = function(task) {
