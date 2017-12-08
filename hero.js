@@ -5,4 +5,8 @@ const Hero = function(name, health, favFood) {
  this.tasks = [];
 }
 
+Hero.prototype.eat = function(food) {
+ this.health = food.replenishment;
+}
+
 module.exports = Hero;
