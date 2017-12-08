@@ -7,4 +7,5 @@ const Food = function(name, replenishment) {
 Food.prototype.setSafety = function(safety) {
  this.safe = safety;
 }
+
 module.exports = Food;

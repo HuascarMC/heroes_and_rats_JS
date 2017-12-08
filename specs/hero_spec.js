@@ -12,7 +12,7 @@ describe('hero', function() {
   food = new Food('coconut', 100);
   food2 = new Food('Rum', 100);
   task = new Task(1, 2, 3, false);
-  task1 = new Task(2, 2, 3, true);
+  task1 = new Task(2, 2, 5, true);
   rat = new Rat();
  });
 
@@ -40,6 +40,20 @@ describe('hero', function() {
  });
 
  xit('should be able to sort task by difficulty', function() {
+  hero.add(task);
+  hero.add(task1);
+  hero.sortTasks();
+  assert.deepStrictEqual(hero.tasks, [task, task1]);
+ });
+
+ xit('should be able to sort task by urgency', function() {
+  hero.add(task);
+  hero.add(task1);
+  hero.sortTasks();
+  assert.deepStrictEqual(hero.tasks, [task, task1]);
+ });
+
+ xit('should be able to sort task by reward', function() {
   hero.add(task);
   hero.add(task1);
   hero.sortTasks();
