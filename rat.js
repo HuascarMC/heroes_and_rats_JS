@@ -2,7 +2,7 @@ const Rat = function() {
 }
 
 Rat.prototype.touch = function(food) {
- food.set(true);
+ food.setSafety(true);
 }
 
 module.exports = Rat;
