@@ -7,15 +7,24 @@ const Hero = function(name, health, favFood) {
  this.tasks = [];
 }
 
-Hero.prototype.eat = function(food) {
-  this.health = (food.replenishment);
-}
-
 Hero.prototype.eatUnsafe = function(food) {
  if(food.safe === false) {
   this.health -= 10;
  }
 }
+
+Hero.prototype.eat = function(food) {
+ if((this.favFood === food.name) && (food.safe === true)) {
+  this.health = food.replenishment;
+  return;
+ } else if (food.safe === false) {
+  this.eatUnsafe(food);
+  return;
+ } else {
+  this.health === food.replenishment;
+ }
+}
+
 
 Hero.prototype.add = function(task) {
  this.tasks.push(task);

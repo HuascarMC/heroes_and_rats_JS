@@ -28,8 +28,8 @@ describe('hero', function() {
   assert.strictEqual(hero.favFood, 'Rum');
  });
 
- xit('should be able to eat food', function() {
-  hero.eat(food);
+ it('should be able to eat food', function() {
+  hero.eat(food2);
   assert.strictEqual(hero.health, 100);
  });
 
@@ -64,7 +64,7 @@ describe('hero', function() {
 
  it('should lose health if eats unsafe food', function() {
   rat.touch(food);
-  hero.eat(food);
-  assert.strictEqual(hero.health, 80);
+  hero.eatUnsafe(food);
+  assert.strictEqual(hero.health, 90);
  })
 });
