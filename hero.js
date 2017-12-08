@@ -15,7 +15,7 @@ Hero.prototype.eatUnsafe = function(food) {
 
 Hero.prototype.eat = function(food) {
  if((this.favFood === food.name) && (food.safe === true)) {
-  this.health = food.replenishment;
+  this.health = (food.replenishment * 1.5);
   return;
  } else if (food.safe === false) {
   this.eatUnsafe(food);
