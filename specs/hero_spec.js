@@ -12,6 +12,7 @@ describe('hero', function() {
   food2 = new Food('Rum', 100);
   task = new Task(1, 2, 3, false);
   task1 = new Task(2, 2, 3, true);
+  rat = new Rat();
  });
 
  it('should have a name', function() {
