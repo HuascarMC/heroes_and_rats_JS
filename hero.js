@@ -6,6 +6,9 @@ const Hero = function(name, health, favFood) {
 }
 
 Hero.prototype.eat = function(food) {
+ if(Hero.favFood = food.name) {
+  this.health = food.replenishment * 1.5;
+ }
  this.health = food.replenishment;
 }
 
