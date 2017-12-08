@@ -30,9 +30,21 @@ Hero.prototype.add = function(task) {
  this.tasks.push(task);
 }
 
-Hero.prototype.sortTask = function(byWhat) {
+Hero.prototype.sortTaskDif = function() {
  return this.tasks.sort(function(task, task1) {
-  return task.byWhat - task1.byWhat;
+  return task.difficulty - task1.difficulty;
+ })
+}
+
+Hero.prototype.sortTaskUrg = function() {
+ return this.tasks.sort(function(task, task1) {
+  return task.urgency - task1.urgency;
+ })
+}
+
+Hero.prototype.sortTaskRew = function() {
+ return this.tasks.sort(function(task, task1) {
+  return task.reward - task1.reward;
  })
 }
 

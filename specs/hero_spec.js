@@ -11,7 +11,7 @@ describe('hero', function() {
   hero = new Hero('Jack Sparrow', 90, 'Rum');
   food = new Food('coconut', 100);
   food2 = new Food('Rum', 100);
-  task = new Task(1, 2, 3, false);
+  task = new Task(1, 4, 3, false);
   task1 = new Task(2, 2, 5, true);
   rat = new Rat();
  });
@@ -42,19 +42,19 @@ describe('hero', function() {
  it('should be able to sort task by difficulty', function() {
   hero.add(task);
   hero.add(task1);
-  assert.deepStrictEqual(hero.sortTask(difficulty), [task, task1]);
+  assert.deepStrictEqual(hero.sortTaskDif(), [task, task1]);
  });
 
  it('should be able to sort task by urgency', function() {
   hero.add(task);
   hero.add(task1);
-  assert.deepStrictEqual(hero.sortTask(urgency), [task, task1]);
+  assert.deepStrictEqual(hero.sortTaskUrg(), [task1, task]);
  });
 
  it('should be able to sort task by reward', function() {
   hero.add(task);
   hero.add(task1);
-  assert.deepStrictEqual(hero.sortTask(reward), [task, task1]);
+  assert.deepStrictEqual(hero.sortTaskRew(), [task, task1]);
  });
 
 
