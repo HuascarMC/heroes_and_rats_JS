@@ -9,6 +9,7 @@ describe('hero', function() {
  beforeEach(function() {
   hero = new Hero('Jack Sparrow', 90, 'Rum');
   food = new Food('coconut', 100);
+  food2 = new Food('Rum', 100);
   task = new Task(1, 2, 3, false);
  });
 
@@ -28,4 +29,11 @@ describe('hero', function() {
   hero.eat(food);
   assert.strictEqual(hero.health, 100);
  });
+
+ it('should be able to replensh food value 1.5 if favourte', function() {
+  hero.eat(food2);
+  assert.strictEqual(hero.health, 150);
+ });
+
+
 });
