@@ -54,8 +54,10 @@ describe('hero', function() {
   assert.deepStrictEqual(hero.completed(), [task1]);
  });
 
- xit('should be able to view incompleted tasks', function() {
-  assert.strictEqual();
+ it('should be able to view incompleted tasks', function() {
+  hero.add(task);
+  hero.add(task1);
+  assert.deepStrictEqual(hero.incompleted(), [task]);
  });
 
 });

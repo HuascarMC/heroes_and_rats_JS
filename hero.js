@@ -32,5 +32,14 @@ Hero.prototype.completed = function() {
  return completed;
 }
 
+Hero.prototype.incompleted = function() {
+ incompleted = [];
+ for (let task of this.tasks) {
+  if(task.completed === false)
+   incompleted.push(task);
+ }
+ return incompleted;
+}
+
 
 module.exports = Hero;
