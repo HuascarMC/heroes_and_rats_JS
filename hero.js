@@ -1,3 +1,5 @@
+const _ = require('lodash');
+
 const Hero = function(name, health, favFood) {
  this.name = name;
  this.health = health;
@@ -15,4 +17,20 @@ Hero.prototype.eat = function(food) {
 Hero.prototype.add = function(task) {
  this.tasks.push(task);
 }
+
+Hero.prototype.sortTasks = function() {
+ this.tasks =  _.sortBy(this.tasks, 0, ['desc', 'asc']);
+ return this.tasks;
+}
+
+Hero.prototype.completed = function() {
+ completed = [];
+ for (let task of this.tasks) {
+  if (task.completed === true)
+   completed.push(task);
+ }
+ return completed;
+}
+
+
 module.exports = Hero;
