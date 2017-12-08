@@ -9,18 +9,18 @@ describe('task', function() {
  });
 
  it('should have difficulty level', function() {
- assert.strictEqual(task.difficulty, 1);
-});
+  assert.strictEqual(task.difficulty, 1);
+ });
 
-it('should have urgency level', function() {
- assert.strictEqual(task.urgency, 2);
-});
+ it('should have urgency level', function() {
+  assert.strictEqual(task.urgency, 2);
+ });
 
-it('should have reward', function() {
- assert.strictEqual(task.reward, 3);
-});
+ it('should have reward', function() {
+  assert.strictEqual(task.reward, 3);
+ });
 
-it('should have completed boolean', function() {
- assert.strictEqual(task.completed, false);
-});
+ it('should have completed boolean', function() {
+  assert.strictEqual(task.completed, false);
+ });
 });
