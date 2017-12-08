@@ -60,4 +60,9 @@ describe('hero', function() {
   assert.deepStrictEqual(hero.incompleted(), [task]);
  });
 
+ it('should lose health if eats unsafe food', function() {
+  rat.touch(food);
+  hero.eat(food);
+  assert.strictEqual(hero.health, 80);
+ })
 });
