@@ -21,7 +21,7 @@ Hero.prototype.eat = function(food) {
   this.eatUnsafe(food);
   return;
  } else {
-  this.health === food.replenishment;
+  this.health = food.replenishment;
  }
 }
 

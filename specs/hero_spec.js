@@ -29,7 +29,8 @@ describe('hero', function() {
  });
 
  it('should be able to eat food', function() {
-  hero.eat(food2);
+  food.setSafety(true);
+  hero.eat(food);
   assert.strictEqual(hero.health, 100);
  });
 
