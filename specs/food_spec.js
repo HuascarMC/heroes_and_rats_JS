@@ -5,7 +5,7 @@ describe('food', function() {
  food = new Food('coconut', 100);
 
  it('has a name', function() {
-  assert.strictEqual(food.coconut, 'coconut');
+  assert.strictEqual(food.name, 'coconut');
  });
 
  it('has a replenishment value', function() {
