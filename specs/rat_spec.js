@@ -6,12 +6,12 @@ describe('rat', function() {
  let rat;
 
  beforeEach(function() {
-  rat = new rat();
+  rat = new Rat();
   food = new Food('coconut', 100);
  });
 
  it('should be able to touch food', function() {
  rat.touch(food);
- assert.strictEqual(food.safe(), true);
+ assert.strictEqual(food.safe, true);
  });
 });
