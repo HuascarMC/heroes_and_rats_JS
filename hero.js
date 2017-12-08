@@ -30,9 +30,10 @@ Hero.prototype.add = function(task) {
  this.tasks.push(task);
 }
 
-Hero.prototype.sortTasks = function() {
- this.tasks =  _.sortBy(this.tasks, 0, ['desc', 'asc']);
- return this.tasks;
+Hero.prototype.sortTask = function(byWhat) {
+ return this.tasks.sort(function(task, task1) {
+  return task.byWhat - task1.byWhat;
+ })
 }
 
 Hero.prototype.completed = function() {
