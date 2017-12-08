@@ -13,9 +13,13 @@ Hero.prototype.eatUnsafe = function(food) {
  }
 }
 
+Hero.prototype.eatFav = function(food) {
+  this.health = (food.replenishment * 1.5);
+}
+
 Hero.prototype.eat = function(food) {
  if((this.favFood === food.name) && (food.safe === true)) {
-  this.health = (food.replenishment * 1.5);
+  this.eatFav(food);
   return;
  } else if (food.safe === false) {
   this.eatUnsafe(food);
@@ -24,6 +28,7 @@ Hero.prototype.eat = function(food) {
   this.health = food.replenishment;
  }
 }
+
 
 
 Hero.prototype.add = function(task) {
