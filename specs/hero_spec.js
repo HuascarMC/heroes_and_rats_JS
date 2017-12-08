@@ -35,5 +35,21 @@ describe('hero', function() {
   assert.strictEqual(hero.health, 150);
  });
 
+ xit('should be able to sort task by difficulty', function() {
+
+ });
+
+ it('should be able to add tasks', function() {
+  hero.add(task);
+  assert.strictEqual(hero.tasks.length, 1);
+ });
+
+ xit('should be able to view completed tasks', function() {
+  assert.strictEqual();
+ });
+
+ xit('should be able to view incompleted tasks', function() {
+  assert.strictEqual();
+ });
 
 });
