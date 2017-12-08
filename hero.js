@@ -4,3 +4,5 @@ const Hero = function(name, health, food) {
  this.food = food;
  this.tasks = [];
 }
+
+module.exports = Hero;
